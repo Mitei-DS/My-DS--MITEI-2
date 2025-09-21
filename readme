@@ -1,0 +1,16 @@
+This is a simple, single-file banking application built using the Streamlit framework. The app provides a basic demonstration of a banking system's core functionalities, including user authentication and common financial transactions, all within a clean and interactive web interface.
+
+Features
+Account Management: Users can create new accounts with a unique account number and a 4-digit password.
+
+User Authentication: A login system allows users to access their specific account.
+
+Financial Transactions:
+
+Deposit: Add funds to the account.
+
+Withdraw: Remove funds from the account, with a check for sufficient balance.
+
+Send Money: Transfer funds to another user's account.
+
+Session State: The app uses Streamlit's st.session_state to maintain user data and balances across interactions, simulating a persistent database for the duration of the session.
