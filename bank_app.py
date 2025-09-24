@@ -16,8 +16,8 @@ def create_account(account_number, password):
             return False
     
     # Check if the password is a valid 4-digit number
-    if not password.isdigit() or len(password) != 4:
-        st.error("❌ Invalid password. Must be a 4-digit number.")
+    if not password.isdigit() or len(password) != 5:
+        st.error("❌ Invalid password. Must be a 5-digit number.")
         return False
         
     # Add new account as a dictionary to the list
