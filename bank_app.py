@@ -102,7 +102,7 @@ if st.session_state.logged_in_user is None:
     with st.form("create_account_form"):
         st.write("Create Account")
         create_account_number = st.text_input("New Account Number")
-        create_password = st.text_input("New Password (4 digits)", type="password")
+        create_password = st.text_input("New Password (5 digits)", type="password")
         create_button = st.form_submit_button("Create Account")
         if create_button:
             create_account(create_account_number, create_password)
@@ -138,14 +138,14 @@ else:
     
     elif option == "Deposit":
         with st.form("deposit_form"):
-            deposit_amount = st.number_input("Enter amount to deposit:", min_value=0.0, format="%f")
+            deposit_amount = st.number_input("Enter amount to deposit:", min_value=0.100, format="%f")
             deposit_button = st.form_submit_button("Deposit")
             if deposit_button:
                 deposit(st.session_state.logged_in_user['account_number'], deposit_amount)
     
     elif option == "Withdraw":
         with st.form("withdraw_form"):
-            withdraw_amount = st.number_input("Enter amount to withdraw:", min_value=0.0, format="%f")
+            withdraw_amount = st.number_input("Enter amount to withdraw:", min_value=0.100, format="%f")
             withdraw_button = st.form_submit_button("Withdraw")
             if withdraw_button:
                 withdraw(st.session_state.logged_in_user['account_number'], withdraw_amount)
