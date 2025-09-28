@@ -84,7 +84,7 @@ def send_money(from_account, to_account_number, amount):
 
 # --- App Layout and Logic ---
 
-st.title("🏦 Erastus Bank App")
+st.title("🏦 MITEI Bank App")
 
 # Main Page Layout
 if st.session_state.logged_in_user is None:
